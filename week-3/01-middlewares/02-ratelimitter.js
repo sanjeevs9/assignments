@@ -15,7 +15,7 @@ app.use(express.json());
 let numberOfRequestsForUser = {};
 setInterval(() => {
   numberOfRequestsForUser = {};
-}, 1000)
+}, 5000)
 
 function check(req,res,next){
   let user=req.header['user-id']
