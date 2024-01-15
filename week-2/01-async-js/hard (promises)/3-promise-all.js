@@ -4,20 +4,29 @@
  * Return a promise.all which return the time in milliseconds it takes to complete the entire operation.
  */
 
-function wait1(t) {
+const wait = require("./1-promisify-setTimeout");
+
+function wait1(t1) {
+    return new Promise(resolve=>{
+        setTimeout(resolve,t1);
+    })
 
 }
 
-function wait2(t) {
-
+function wait2(t2) {
+    return new Promise(resolve=>{
+        setTimeout(resolve,t2);
+    })
 }
 
-function wait3(t) {
-
+function wait3(t3) {
+    return new Promise(resolve=>{
+        setTimeout(resolve,t3);
+    })
 }
 
 function calculateTime(t1, t2, t3) {
-
+Promise.all([wait1])
 }
 
 module.exports = calculateTime;

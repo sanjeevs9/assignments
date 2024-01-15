@@ -10,7 +10,10 @@ function adminMiddleware(req, res, next) {
     const value=token.split(" ");
    
     const verified=jwt.verify(value[1],secret);
+    
+    
     if(verified){
+        
         next()
     }else{
         res.json({
